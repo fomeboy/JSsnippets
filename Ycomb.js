@@ -1,4 +1,3 @@
-
 console.log('Initial ver: ' + function () {
 
     // Jim Weirich talk
@@ -258,5 +257,30 @@ console.log('9.factorial: ' + function () {
 
     fact = y(fact_improver);
     return fact(5);
+
+}());
+
+//step 10 - single expression
+
+console.log('10.factorial: ' + function () {
+
+    return function (f) {
+            return function (g) {
+                    return function (n) {
+                        return f(g(g))(n);
+                    };
+                }
+                (function (g) {
+                    return function (n) {
+                        return f(g(g))(n);
+                    };
+                });
+        }
+        (function (partial) {
+            return function (n) {
+                return n === 0 ? 1 : n * partial(n - 1);
+            };
+        })(5);
+
 
 }());
