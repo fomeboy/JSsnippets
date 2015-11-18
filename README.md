@@ -1,2 +1,2 @@
 # JSsnippets
-Lambda calculus Y combinator implementation
+Lambda calculus Y combinator javascript implementation
